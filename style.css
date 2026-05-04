@@ -1,6 +1,7 @@
 .foto{
-    width 54%
+    width:54
 }
 body{
-    backgrond-color: #f527f5
+    background-color: blue;
+display: flex;
 }
