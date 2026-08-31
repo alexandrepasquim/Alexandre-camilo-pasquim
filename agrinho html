@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f5f7fa;
+            color: #222;
+        }
+
+        /* MENU */
+        header {
+            background: #111827;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            color: #38bdf8;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        /* INÍCIO */
+        .inicio {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #0f172a, #1e3a8a);
+            color: white;
+        }
+
+        .inicio h2 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .inicio p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #dbeafe;
+        }
+
+        .botao {
+            display: inline-block;
+            background: #38bdf8;
+            color: #0f172a;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            background: #7dd3fc;
+            transform: scale(1.05);
+        }
+
+        /* SEÇÕES */
+        section {
+            padding: 80px 8%;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 40px;
+            color: #111827;
+        }
+
+        .sobre {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        /* SERVIÇOS */
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            width: 280px;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: #2563eb;
+        }
+
+        .card p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* CONTATO */
+        .contato {
+            background: #e5e7eb;
+            text-align: center;
+        }
+
+        .contato p {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        /* RODAPÉ */
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* CELULAR */
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 14px;
+            }
+
+            .inicio h2 {
+                font-size: 36px;
+            }
+
+            .inicio p {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Meu Site</h1>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section class="inicio" id="inicio">
+        <div>
+            <h2>Bem-vindo ao meu site!</h2>
+            <p>Um site moderno, bonito e responsivo.</p>
+            <a href="#sobre" class="botao">Conheça mais</a>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <h2>Sobre</h2>
+
+        <div class="sobre">
+            <p>
+                Este é um exemplo de site criado com HTML e CSS.
+                Você pode modificar os textos, cores, imagens e
+                informações para transformar este modelo no seu próprio site.
+            </p>
+        </div>
+    </section>
+
+    <section id="servicos">
+        <h2>Serviços</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Serviço 1</h3>
+                <p>
+                    Descrição do primeiro serviço oferecido.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Serviço 2</h3>
+                <p>
+                    Descrição do segundo serviço oferecido.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Serviço 3</h3>
+                <p>
+                    Descrição do terceiro serviço oferecido.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contato" id="contato">
+        <h2>Contato</h2>
+
+        <p>
+            Entre em contato comigo para saber mais.
+        </p>
+
+        <a href="mailto:seuemail@email.com" class="botao">
+            Enviar e-mail
+        </a>
+    </section>
+
+    <footer>
+        <p>© 2026 Meu Site - Todos os direitos reservados tiago patricio.</p>
+    </footer>
+
+</body>
+</html>
